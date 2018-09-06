@@ -1,0 +1,273 @@
+add this to your .gitconfig file
+
+alias glog='git log --graph --prety=format:"%Cred%h %Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+
+-----------------------------------------------
+
+Personal@Vishal MINGW64 /
+$ cd sample
+bash: cd: sample: No such file or directory
+
+Personal@Vishal MINGW64 /
+$ cd C:\Users\Personal\sample
+bash: cd: C:UsersPersonalsample: No such file or directory
+
+Personal@Vishal MINGW64 /
+$ cd sample
+bash: cd: sample: No such file or directory
+
+Personal@Vishal MINGW64 /
+$ cd 'C:\Users\Personal\sample'
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ pwd
+/c/Users/Personal/sample
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ cd C:/Users/Personal/sample
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ glog
+bash: glog: command not found
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git log
+commit 6b0ef1668b82abc0554692faab68ab0782326b86 (HEAD -> master)
+Author: Deepti Aggarwal <er.deepti2013@gmail.com>
+Date:   Sat Jul 14 11:27:13 2018 +0530
+
+    made changes in marmeto info.txt
+
+commit b84d856c6bafb2dbfadf71e633d564b9b27636d7
+Author: Deepti Aggarwal <er.deepti2013@gmail.com>
+Date:   Sat Jul 14 10:57:03 2018 +0530
+
+    new commit message
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ touch .gitignore
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ touch abc.o
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ touch def.exe
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git log
+commit 6b0ef1668b82abc0554692faab68ab0782326b86 (HEAD -> master)
+Author: Deepti Aggarwal <er.deepti2013@gmail.com>
+Date:   Sat Jul 14 11:27:13 2018 +0530
+
+    made changes in marmeto info.txt
+
+commit b84d856c6bafb2dbfadf71e633d564b9b27636d7
+Author: Deepti Aggarwal <er.deepti2013@gmail.com>
+Date:   Sat Jul 14 10:57:03 2018 +0530
+
+    new commit message
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   marmeto into.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        abc.o
+        def.exe
+
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   marmeto into.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ touch hef.txt
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ mkdir tmp
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   marmeto into.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        hef.txt
+
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   marmeto into.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        hef.txt
+
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git log
+commit 6b0ef1668b82abc0554692faab68ab0782326b86 (HEAD -> master)
+Author: Deepti Aggarwal <er.deepti2013@gmail.com>
+Date:   Sat Jul 14 11:27:13 2018 +0530
+
+    made changes in marmeto info.txt
+
+commit b84d856c6bafb2dbfadf71e633d564b9b27636d7
+Author: Deepti Aggarwal <er.deepti2013@gmail.com>
+Date:   Sat Jul 14 10:57:03 2018 +0530
+
+    new commit message
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   marmeto into.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        hef.txt
+
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git add .
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   hef.txt
+        modified:   marmeto into.txt
+
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git log
+commit 6b0ef1668b82abc0554692faab68ab0782326b86 (HEAD -> master)
+Author: Deepti Aggarwal <er.deepti2013@gmail.com>
+Date:   Sat Jul 14 11:27:13 2018 +0530
+
+    made changes in marmeto info.txt
+
+commit b84d856c6bafb2dbfadf71e633d564b9b27636d7
+Author: Deepti Aggarwal <er.deepti2013@gmail.com>
+Date:   Sat Jul 14 10:57:03 2018 +0530
+
+    new commit message
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git commit -m "ignore commit"
+[master 050a38b] ignore commit
+ 3 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ create mode 100644 hef.txt
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ mkdir hell
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status -s
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ touch newabc.txt
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status -u
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        newabc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status -s
+?? newabc.txt
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status -s -uno
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        newabc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git remote add origin https://github.com/deepti001/sample.git
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git remote
+origin
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git help remote
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git help ptions
+The system cannot find the file C:/Program Files/Git/mingw64/share/doc/git-doc/gitptions.html.
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git help options
+The system cannot find the file C:/Program Files/Git/mingw64/share/doc/git-doc/gitoptions.html.
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git help show
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git remote -v
+origin  https://github.com/deepti001/sample.git (fetch)
+origin  https://github.com/deepti001/sample.git (push)
+
+Personal@Vishal MINGW64 ~/sample (master)
+$ git remote --v
+origin  https://github.com/deepti001/sample.git (fetch)
+origin  https://github.com/deepti001/sample.git (push)
+
+Personal@Vishal MINGW64 ~/sample (master)
+$

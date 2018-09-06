@@ -1,0 +1,10 @@
+GIt / SVN
+
+Decentralised - have a local copy that is
+Complex to learn
+Unable to handle Binary files
+Internal directory
+User Interface
+
+
+-----------------------------
