@@ -1,0 +1,22 @@
+ls -la		//
+which git	// where git is installed
+git --version	//
+
+configuration:
+1. system level configuration //default
+	/etc/gitconfig			// in unix
+	Program Files\Git\etc\gitconfig	// in windows
+2. user level configuration
+	~/.gitconfig		//in unix
+	$HOME\.gitconfig	// in windows
+3. project basic
+	my_project/.git/config
+
+-------------------------
+1 system
+	git config --system
+2. user
+	git config --global
+3. project
+	fit config
+tyfdthgwdvhasvhvahsvfy -----------------------------
